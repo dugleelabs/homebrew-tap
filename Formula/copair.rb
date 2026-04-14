@@ -1,15 +1,26 @@
 class Copair < Formula
   desc "Model-agnostic AI coding agent for the terminal"
   homepage "https://github.com/dugleelabs/copair"
-  url "https://github.com/dugleelabs/copair/archive/refs/tags/v1.3.0.tar.gz"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
   license "MIT"
+  version "1.4.5"
 
-  depends_on "node@20"
+  on_macos do
+    on_arm do
+      url "https://github.com/dugleelabs/copair/releases/download/v1.4.5/copair-darwin-arm64"
+      sha256 "9134359b8f361125ad45d9fe0789ccadd846d6dc899378c451aca75fabef81e8"
+    end
+  end
+
+  on_linux do
+    on_intel do
+      url "https://github.com/dugleelabs/copair/releases/download/v1.4.5/copair-linux-x64"
+      sha256 "ef756d7559d8176853ec20d31c2d6baedaa9523cb6feb8c7fc312f3d8c059441"
+    end
+  end
 
   def install
-    system "npm", "install", *std_npm_args, "--production"
-    bin.install_symlink libexec/"bin/copair"
+    binary = Dir["copair-*"].first || "copair"
+    bin.install binary => "copair"
   end
 
   test do
