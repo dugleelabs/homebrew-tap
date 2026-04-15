@@ -2,19 +2,19 @@ class Copair < Formula
   desc "Model-agnostic AI coding agent for the terminal"
   homepage "https://github.com/dugleelabs/copair"
   license "MIT"
-  version "1.5.0"
+  version "1.6.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/dugleelabs/copair/releases/download/v1.5.0/copair-darwin-arm64"
-      sha256 "062b5921e381f78a19d07a315931ad248b496eb35f70d88712ac866c6cd4ea50"
+      url "https://github.com/dugleelabs/copair/releases/download/v1.6.0/copair-darwin-arm64"
+      sha256 "c28c28ded15b2bfb83539606db39cd5f7ffcf6d38082b0bff24ce86ef11f7c34"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/dugleelabs/copair/releases/download/v1.5.0/copair-linux-x64"
-      sha256 "2f80cba848716d2bdc04992a44027c5dc25529185bae62f94252c41b098b9ddd"
+      url "https://github.com/dugleelabs/copair/releases/download/v1.6.0/copair-linux-x64"
+      sha256 "bee4e52b99f9a4c0c12fd6e0ac971f1cec345ac5da1f59e6da52c991970916e2"
     end
   end
 
